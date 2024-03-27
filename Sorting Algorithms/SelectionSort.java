@@ -1,20 +1,20 @@
 public class SelectionSort {
 
-    public void sort(int arr[]) { //Selection Sort
-        int size = arr.length, max, temp;
-        for (int i = 0; i < size - 1; i++) {
-            max = 0;
-            for (int j = 1; j < size - i; j++) {
-                if (arr[j] > arr[max])
-                    max = j;
-                temp = arr[size - 1 - i];
-                arr[size - 1 - i] = arr[max];
-                arr[max] = temp;
+    public void sort(int arr[]) {                   //Selection Sort
+        int size = arr.length, min, temp;
+        for (int i = 0; i < size-1; i++) {
+            min = i;
+            for (int j = i + 1; j < size; j++) {
+                if (arr[j] < arr[min])
+                    min = j;
             }
-        }
+            temp = arr[i];
+            arr[i] = arr[min];
+            arr[min] = temp;
+       }
     }
 
-    public static void main(String args[]) { //main method
+    public static void main(String args[]) {                     //main method
         int arr[] = { 4, 2, 1, 5, 3 };
         SelectionSort obj = new SelectionSort();
         obj.sort(arr);
