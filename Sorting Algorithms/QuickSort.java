@@ -1,6 +1,6 @@
 public class QuickSort {
-    
-    private int partition(int arr[], int low, int high) {           //partition method
+
+    private int partition(int arr[], int low, int high) { //partition method
         int pivot = arr[high];
         int i = low - 1;
 
@@ -21,16 +21,17 @@ public class QuickSort {
         return i;
     }
 
-    public void sort(int arr[], int low, int high) {            //sort method
+    public void sort(int arr[], int low, int high) { //sort method
         if (low < high) {
             int pivotIndex = partition(arr, low, high);
 
             sort(arr, low, pivotIndex - 1);
             sort(arr, pivotIndex + 1, high);
         }
-        
+
     }
-    public static void main(String args[]) {            //main method
+
+    public static void main(String args[]) { //main method
         int array[] = { 3, 5, 4, 1, 2 };
         QuickSort obj = new QuickSort();
         obj.sort(array, 0, array.length - 1);
@@ -40,3 +41,9 @@ public class QuickSort {
         }
     }
 }
+
+/*
+ *Time Complexity = O(n^2)
+ * Space Complexity = O(n.log(n))
+ * Stable Sorting = No
+ */
