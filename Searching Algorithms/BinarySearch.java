@@ -24,3 +24,8 @@ public class BinarySearch {
         System.out.println("Element exists: " + answer);
     }
 }
+
+/*
+ * Time Complexity: O(log(n))
+ * Space Complexity: O(1)
+ */
