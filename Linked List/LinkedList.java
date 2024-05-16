@@ -38,6 +38,7 @@ public class LinkedList {
 
             if (head == null) {
                 head = newNode;
+                return;
             }
             while (curr.next != null) {
                 curr = curr.next;
@@ -56,9 +57,9 @@ public class LinkedList {
 
         public static void main(String args[]) {
             LinkedList ll = new LinkedList();
-            ll.addHead(1);
-            ll.addHead(2);
-            ll.addHead(3);
+            ll.addTail(1);
+            ll.addTail(2);
+            ll.addTail(3);
             ll.display();
             System.out.println("Size: " + ll.size());
             System.out.println("is Empty: " + ll.isEmpty());
