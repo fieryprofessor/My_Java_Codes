@@ -12,6 +12,7 @@ public class TernarySearch {
         }
         System.out.println("Enter the target");
         int key = sc.nextInt();
+        sc.close();
         boolean answer = TSearch(arr, 0, n, key);
         if (answer)
             System.out.println("Target found");

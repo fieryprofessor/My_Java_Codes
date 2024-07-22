@@ -12,6 +12,7 @@ public class ExponentialSearch {
         }
         System.out.println("Enter the target");
         int key = sc.nextInt();
+        sc.close();
         boolean answer = ESearch(arr, n, key);
         if (answer)
             System.out.println("Target found");
